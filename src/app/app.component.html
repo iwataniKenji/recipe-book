@@ -1,9 +1,14 @@
+<!-- featureSelected -> string recebida do filho ao clicar -->
+<!-- onNavigate -> usa o valor recebido para roteamento -->
 <app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+
+      <!-- carrega apenas se if for true -->
       <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
       <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
+
     </div>
   </div>
 </div>
